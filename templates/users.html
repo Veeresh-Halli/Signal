@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <section>
+    <div class="card card-body mt-5 text-center">
+        <h3>Total Users : {{users_count}}</h3>
+    </div>
+    </section>
+    
+    <section class="mt-5">
+        <div class="card card-body">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Active Users</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for i in active_users %}
+              <tr>
+                  <td>{{i}}</td>
+                  <td><img src="{% static 'images/online.png' %}" width=18px> Online</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+    </section>
+
+
+   
+</div>
+{% endblock %}

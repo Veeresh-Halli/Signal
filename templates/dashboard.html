@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<section>
+    <div class="container text-center mt-5">
+        <div class="card card-body">
+            <h2>TOTAL USERS : {{users}}</h2>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container text-center mt-5">
+        <div class="card card-body">
+            <h2>TOTAL USER LOGIN COUNTS : {{count}}</h2>
+            <h2>ACTIVE USERS : {{active_users}}</h2>
+        </div>
+    </div>
+</section>
+<section>
+<div class="container mt-5 mb-5">
+    <div class="card card-body">
+        <div class="row">
+            <div class="col-lg-6 col-md6 col-12">
+                <div class="card card-body">
+                    <h3>Customer : {{username}}</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 mt-2">
+                <div class="card card-body">
+                    <p>Your Total Login (within 24hrs) : {{count1}}</p>
+                    <p>Your IP Address : {{ip}}</p>
+                    <p>Your Browser : {{browser}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+
+{% endblock %}
